@@ -1,0 +1,193 @@
+/* Login.css */
+
+/* Base Styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Logo Styles */
+.logo-wrapper {
+  margin-bottom: 2rem;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 12px rgba(58, 123, 213, 0.2);
+}
+
+.app-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+
+/* Header Styles */
+.login-header h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.login-header p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Form Styles */
+.login-form {
+  margin-top: 1.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #dfe6e9;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #3a7bd5;
+  box-shadow: 0 0 0 0.2rem rgba(58, 123, 213, 0.25);
+}
+
+/* Password Input Wrapper */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.toggle-button:hover {
+  color: #3a7bd5;
+  background: rgba(58, 123, 213, 0.1);
+}
+
+/* Button Styles */
+.login-btn {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(58, 123, 213, 0.2);
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(58, 123, 213, 0.3);
+}
+
+.login-btn:disabled {
+  background: #bdc3c7;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Link Styles */
+.text-center a {
+  color: #3a7bd5;
+  transition: all 0.2s ease;
+}
+
+.text-center a:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+  
+  .login-card {
+    padding: 1.5rem;
+  }
+  
+  .app-title {
+    font-size: 1.5rem;
+  }
+  
+  .login-header h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-card {
+    padding: 1.25rem;
+  }
+  
+  .form-control {
+    padding: 0.65rem 0.9rem;
+  }
+  
+  .login-btn {
+    padding: 0.65rem;
+    font-size: 0.85rem;
+  letter-spacing: normal;
+  margin-bottom: 1rem;
+  }
+}
+
+/* Animation for better UX */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-card {
+  animation: fadeIn 0.4s ease-out forwards;
+}

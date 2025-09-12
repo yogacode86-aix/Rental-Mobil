@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App.css atau file global lain */
+.main-content,
+.content-wrapper,
+.page-content,
+.admin-content {
+  padding-top: 70px; /* Sesuaikan dengan tinggi navbar */
+}
+
+/* Tambahkan di style/global.css atau style/App.css */
+.home-page-root,
+.booking-page-root,
+.user-orders-root,
+.layanan-page-root,
+.about-page,
+.kontak-page-root {
+  padding-top: 70px; /* atau sesuai tinggi navbar Anda */
+}
+
+/* App.css atau global.css */
+.app-root-flex {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content-flex {
+  flex: 1 0 auto;
+}
+
+/* Tambahkan di global CSS atau App.css */
+body, #root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content, .content-with-footer {
+  flex: 1;
+}
