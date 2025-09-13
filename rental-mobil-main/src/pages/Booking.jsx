@@ -405,6 +405,41 @@ const Booking = () => {
     }
   };
 
+  // Contoh logic di frontend (React)
+  function handleMidtransPayment(token, orderId) {
+    if (!window.snap) {
+      // Load Snap JS jika belum ada
+      const script = document.createElement("script");
+      script.src = "https://app.midtrans.com/snap/snap.js";
+      script.setAttribute("data-client-key", process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY);
+      script.onload = () => payWithSnap(token, orderId);
+      document.body.appendChild(script);
+    } else {
+      payWithSnap(token, orderId);
+    }
+  }
+
+  function payWithSnap(token, orderId) {
+    window.snap.pay(token, {
+      onSuccess: function(result) {
+        // Pembayaran berhasil
+        window.location.href = `/receipt/${orderId}`;
+      },
+      onPending: function(result) {
+        // Pembayaran pending, tetap arahkan ke receipt
+        window.location.href = `/receipt/${orderId}`;
+      },
+      onError: function(result) {
+        // Error pembayaran, arahkan ke receipt untuk info lebih lanjut
+        window.location.href = `/receipt/${orderId}`;
+      },
+      onClose: function() {
+        // User menutup popup tanpa bayar, tetap arahkan ke receipt
+        window.location.href = `/receipt/${orderId}`;
+      }
+    });
+  }
+
   if (isSessionExpired) {
     return null;
   }
