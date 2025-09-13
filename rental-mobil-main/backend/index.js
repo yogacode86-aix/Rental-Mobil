@@ -39,7 +39,7 @@ const allowedOrigins = [
   "http://localhost:3000", // tambahkan ini jika perlu
   "https://rental-mobil-ruby.vercel.app",
   "https://rental-mobil-rcmr1udov-yoga-krisnas-projects.vercel.app",
-  "https://uji-coba-production.up.railway.app"
+  "https://uji-coba-production-7dc8.up.railway.app"
   // Tambahkan domain frontend lain jika perlu
 ];
 
